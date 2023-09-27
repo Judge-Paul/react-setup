@@ -38,7 +38,7 @@ echo "Setting up a React project in /$project_name using $package_manager..."
 if [ "$package_manager" = "npm" ]; then
     npm create vite@latest "$project_name" -- --template react > /dev/null 2>&1
 else
-    $package_manager create "$project_name" --template react > /dev/null 2>&1
+    $package_manager create vite "$project_name" --template react > /dev/null 2>&1
 fi
 
 # Check if the project directory was created
