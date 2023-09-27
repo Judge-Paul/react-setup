@@ -30,9 +30,9 @@ read -p "Do you want to install React Icons? (y/n): " install_icons
 # Create the project using Vite
 echo "Setting up a React project in /$project_name using $package_manager..."
 if [ "$package_manager" = "npm" ]; then
-    npm create vite@latest "$project_name" -- --template react
+    npm create vite@latest "$project_name" -- --template react > /dev/null 2>&1
 else
-    $package_manager create "$project_name" -- --template react
+    $package_manager create "$project_name" -- --template react > /dev/null 2>&1
 fi
 
 # Check if the project directory was created
